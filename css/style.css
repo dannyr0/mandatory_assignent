@@ -105,6 +105,8 @@ body {
   color:var(--background-color-light);
 } 
 
+
+
 .hero-container {/* child to follow to 12 column */
   display:grid;
   grid-template-columns: repeat(12, 1fr);
