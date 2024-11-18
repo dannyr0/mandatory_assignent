@@ -1,0 +1,455 @@
+/* 기본 설정 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111; /* 어두운 배경 */
+    color: #fff;
+}
+
+
+/* 상단 내비게이션 스타일 */
+.top-nav {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.top-nav a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.top-nav span {
+    color: #fff; /* 구분자 색 (흰색) */
+    margin: 0 5px;
+}
+
+/* 링크 색상 */
+.orange-link {
+    color: #ff6600; /* HOME: 주황색 */
+}
+
+.white-link {
+    color: #fff; /* RECIPES와 ABOUT: 흰색 */
+}
+
+/* 링크에 마우스를 올렸을 때 */
+.top-nav a:hover {
+    text-decoration: underline;
+}
+
+.todays_recipe {  
+    height: fit-content;
+    width:var(--width-full);
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 130px auto;
+    gap:var(--grid-gap);
+  }  /* end copy */
+
+  
+  /* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: #111;
+    color: #fff;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+
+/* 제목 스타일 */
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 5px;
+}
+
+/* Hero Image Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Hero 이미지 높이 */
+    background-image: url('https://img.hellofresh.com/w_3840,q_auto,f_auto,c_fill,fl_lossy/hellofresh_s3/image/winner-winner-chicken-orzo-dinner-20387f10.jpg'); /* 여기에 실제 이미지 경로 입력 */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5); /* 어두운 오버레이 */
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.hero-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #2980b9;
+}
+
+
+/* Editor's Choice Section */
+.container2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.container2 h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #fff;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.editors-choice {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+/* Editor's Choice Section */
+.container2 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.container2 h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #fff;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+    display: inline-block;
+    
+}
+
+
+/* 카테고리 섹션 */
+.category-section {
+    background-color: #f7f7f7;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.category-section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.category {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 11px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.category:hover {
+    background-color: #2980b9;
+}
+
+.category:active {
+    background-color: #1c598a;
+}
+
+
+
+
+
+/* Flexbox 레이아웃 및 아이템 스타일 */
+.editors-choice {
+    margin-top: 100px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.choice-item {
+    text-align: center;
+    max-width: 500px;
+    width: 48%;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 그림자 추가 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choice-item:hover {
+    transform: translateY(-5px); /* 호버 시 약간 올라가는 효과 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* 이미지 스타일 */
+.choice-item img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.choice-item img:hover {
+    transform: scale(1.05); /* 이미지 호버 시 확대 */
+    cursor: pointer;
+}
+
+/* 설명 텍스트 스타일 */
+.choice-description {
+    margin-top: 10px;
+    color: #ddd;
+    font-size: 0.9em;
+}
+
+
+
+
+
+ /* Benefits Section */
+.benefits-section {
+    width: 100%;
+    height: 400px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 200px;
+    color: #111;
+}
+
+.benefit-item {
+    text-align: center;
+    flex: 1;
+}
+
+.benefit-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.benefit-item p {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+
+/* Latest & Greatest Section */
+.latest-greatest-section {
+    margin-top: 200px;
+    background-color: #111;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.latest-greatest-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #555;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.latest-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.latest-card {
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.latest-card:hover {
+    transform: translateY(-5px); /* 호버 시 살짝 올라가는 효과 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.latest-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content .date {
+    font-size: 0.85em;
+    color: #bbb;
+    margin-bottom: 5px;
+}
+
+.card-content h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.card-content p {
+    font-size: 0.9em;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    display: inline-block;
+    font-size: 0.9em;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: #2980b9;
+}
+
+/* 반응형 설정 */
+@media (max-width: 992px) {
+    .latest-cards {
+        flex-wrap: wrap;
+    }
+    .latest-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .latest-card {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* 직사각형 인포메이션 섹션 */
+.information-section {
+ 
+    background-color: #fffefe; /* 주황색 배경 */
+    padding: 40px 20px; /* 여백 추가 */
+    display: flex;
+    justify-content: space-between; /* 좌우로 요소 분리 */
+    align-items: center; /* 수직으로 중앙 정렬 */
+    color: #000000; /* 흰색 글자 */
+    margin: 100px auto; /* 거의 붙도록 위아래 간격 최소화 (10px) */
+    width: 100%; /* 전체 너비 */
+    max-width: 1600px; /* 최대 너비 설정 */
+    margin-top: 100px;
+  }
+  
+  .information-section .social-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .information-section .social-icons img {
+    width: 30px; /* 아이콘 크기 */
+    height: 30px; /* 아이콘 높이 */
+    margin-right: 15px; /* 아이콘 간의 간격 */
+  }
+  
+  .information-section .contact-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .information-section .contact-info .divider {
+    margin: 0 15px; /* 구분선 좌우 간격 */
+    font-size: 24px; /* 구분선 크기 */
+  }
+  
+  .information-section a {
+    color: #000000; /* 링크 색상을 흰색으로 설정 */
+    text-decoration: none; /* 밑줄 제거 */
+  }
+  
+  .information-section a:hover {
+    text-decoration: underline; /* 호버 시 밑줄 추가 */
+  }
+  
+  
+  
+
+
+
+
+
+
+
+
+  
+  @media(width < 600) {
+    
+  } 
