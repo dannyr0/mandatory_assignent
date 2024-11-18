@@ -93,7 +93,7 @@ body {
 }
 
 .hero { /* Parent with 100% width*/
-  background-image: url(https://img.freepik.com/premium-photo/bowl-soup-with-black-background_111797-1844.jpg);
+  background-image: url(https://img.freepik.com/premium-photo/bowl-soup-with-black-background_111797-1844.jpg );
   width:var(--width-full);
   height:auto;
   min-height:600px;
