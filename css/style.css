@@ -730,7 +730,7 @@ color: var(--category-seafood);
 
 
  /* Responsive design adjustments */
-@media (max-width: 1200px) {
+ @media (max-width: 1200px) {
   /* Adjusts width and padding for smaller screens */
   .container, .menu-container, .todays_recipes_content, .hero-container, .grid-container, .information-section {
     width: 90%;
