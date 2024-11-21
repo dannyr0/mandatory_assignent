@@ -103,6 +103,7 @@ body {
 
   margin-top:-40px;
   color:var(--background-color-light);
+  
 } 
 
 
@@ -766,3 +767,88 @@ color: var(--category-seafood);
     font-size: 36px; /* Smaller text for tablets */
     text-align: center; /* Center-align headline for better layout */
   }}
+
+
+
+  
+  
+  @media (max-width: 768px) {
+    .todays_recipes_content {
+      grid-template-columns: 1fr; /* Stack cards vertically */
+      gap: 20px; /* Adjust gap for better spacing on smaller screens */
+    }
+  
+    .todays_recipes_content_block {
+      width: 100%; /* Ensure cards take up the full width */
+    }
+  
+    .todays_recipes_content_block_text h4 {
+      font-size: 18px; /* Adjust heading size for mobile */
+    }
+  
+    .todays_recipes_content_block_text p {
+      font-size: 14px; /* Adjust paragraph text size */
+    }
+  
+    .todays_recipes_content_block_bottom_area_right button {
+      padding: 5px 10px; /* Reduce button padding */
+      font-size: 10px; /* Adjust button font size */
+    }
+  }
+
+  
+
+
+
+  
+
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto; 
+      gap: 20px; 
+    }
+  
+    .grid-item.text-left, 
+    .grid-item.text-right {
+      text-align: center; 
+      padding: 20px;
+    }
+  
+    .grid-item.text-left .continue-button, 
+    .grid-item.text-right .continue-button {
+      position: static; 
+      margin: 10px auto; 
+    }
+  
+    .grid-item img {
+      width: 100%; 
+      height: auto; 
+    }
+  }
+  
+  
+
+  /* 반응형: 작은 화면에서 텍스트와 아이콘 크기 대폭 줄이기 */
+@media (max-width: 768px) {
+  .category-selection td {
+    font-size: 12px; /* 텍스트 크기 크게 줄이기 */
+    padding: 5px; /* 텍스트 간 여백 축소 */
+  }
+
+  .category-selection img {
+    max-width: 40px; /* 아이콘 크기 축소 */
+  }
+}
+
+/* 반응형: 더 작은 화면에서 텍스트와 여백 최소화 */
+@media (max-width: 480px) {
+  .category-selection td {
+    font-size: 10px; /* 텍스트 크기 대폭 축소 */
+    padding: 3px; /* 여백 최소화 */
+  }
+
+  .category-selection img {
+    max-width: 30px; /* 아이콘 크기 더 축소 */
+  }
+}
