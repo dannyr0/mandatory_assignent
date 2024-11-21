@@ -856,3 +856,25 @@ color: var(--category-seafood);
   }
 }
 
+
+
+/* Responsive Adjustments for Background Image */
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 300px; /* Reduce height for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 250px; /* Further reduce height for small screens */
+    background-size: 80%; /* Image shrinks further on smaller devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 200px; /* Smallest height for mobile devices */
+    background-size: 70%; /* Shrink image even more */
+  }
+}
