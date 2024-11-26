@@ -832,30 +832,6 @@ color: var(--category-seafood);
   
   
 
-  /* 반응형: 작은 화면에서 텍스트와 아이콘 크기 대폭 줄이기 */
-@media (max-width: 768px) {
-  .category-selection td {
-    font-size: 12px; /* 텍스트 크기 크게 줄이기 */
-    padding: 5px; /* 텍스트 간 여백 축소 */
-  }
-
-  .category-selection img {
-    max-width: 40px; /* 아이콘 크기 축소 */
-  }
-}
-
-/* 반응형: 더 작은 화면에서 텍스트와 여백 최소화 */
-@media (max-width: 480px) {
-  .category-selection td {
-    font-size: 10px; /* 텍스트 크기 대폭 축소 */
-    padding: 3px; /* 여백 최소화 */
-  }
-
-  .category-selection img {
-    max-width: 30px; /* 아이콘 크기 더 축소 */
-  }
-}
-
 
 
 /* Responsive Adjustments for Background Image */
@@ -878,3 +854,113 @@ color: var(--category-seafood);
     background-size: 70%; /* Shrink image even more */
   }
 }
+
+/* Stylizace sekce "Category Selection" */
+.category-selection {
+  text-align: center;
+  margin: 50px 0;
+}
+
+/* Nadpis */
+.category-selection h2 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* Bílé podtržítko */
+.category-selection hr {
+  border: 1px solid white;
+  width: 100%;
+  margin: 0 auto 30px auto; /* Mezera pod podtržítkem */
+}
+
+/* Tabulka kategorií */
+.category-selection table {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Full width for smaller screens */
+  max-width: 800px; /* Limit the maximum width */
+  border-collapse: collapse;
+}
+
+/* Stylizace jednotlivých buněk v tabulce */
+.category-selection td {
+  padding: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: center; /* Ensure proper alignment */
+}
+
+/* Ikony v tabulce */
+.category-selection img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+/* Centrování tabulky */
+.category-selection div {
+  display: flex;
+  justify-content: center;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  /* Change to flexbox for icon layout */
+  .category-selection table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+  }
+
+  /* Each cell becomes a flex item */
+  .category-selection td {
+    width: 23%; /* Approximate for 4 items per row */
+    margin: 1%; /* Add spacing between items */
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* Icons responsive size */
+  .category-selection img {
+    width: 40px; /* Reduce icon size */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust layout for 2 rows: 4 icons in the first row, 3 in the second */
+  .category-selection table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 icons in the first row */
+    grid-template-rows: auto auto; /* Two rows */
+    gap: 15px; /* Space between grid items */
+    justify-items: center; /* Center each item */
+  }
+
+  /* Force the last row to have 3 items */
+  .category-selection td:nth-child(5),
+  .category-selection td:nth-child(6),
+  .category-selection td:nth-child(7) {
+    grid-column: span 1; /* Keep each in its own grid cell */
+  }
+
+  .category-selection td:nth-child(8) {
+    display: none; /* Hide any extra items */
+  }
+
+  .category-selection td {
+    font-size: 12px; /* Further reduce font size for small screens */
+  }
+
+  .category-selection img {
+    width: 35px; /* Further reduce icon size */
+  }
+}
+
+
+
